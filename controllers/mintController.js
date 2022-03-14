@@ -4,7 +4,7 @@ const User = db.users;
 const dotenv = require('dotenv');
 dotenv.config();
 var Web3 = require("web3");
-web3 = new Web3(new Web3.providers.HttpProvider(process.env.RINKEBY_WEB3_PROVIDER));
+web3 = new Web3(new Web3.providers.HttpProvider(process.env.WEB3_PROVIDER));
 const CeloKatzWarriors = require("../abi/CeloKatzWarriors.json");
 const contract = new web3.eth.Contract(CeloKatzWarriors.abi, process.env.CONTRACT_ADDRESS);
 const sequelize = require('sequelize');
